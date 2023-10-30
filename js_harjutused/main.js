@@ -119,6 +119,10 @@ function loeNumbreid () {
             output += `Prantsuse`;
         }
 
+        if (i % 3 === 0 && i % 5 === 0) {
+            output += `Lütseum`
+      }
+
         if (i === 50) {
             output = `Tallinna Prantsuse Lütseum`
         }
