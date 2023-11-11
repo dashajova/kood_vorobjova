@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Diplay</title>
+</head>
+<body>
+    <h1>Text Display</h1>
+    
+    <label for="textInput">Enter Text: </label>
+    <input type="text" id="textInput" placeholder="Type something...">
+
+    <button id="updateButton">Update Text</button>
+    
+    <div id="output">Text will be displayed here.</div>
+    
+    <script>
+        
+        let inputElement = document.getElementById("textInput");
+        let outputElement = document.getElementById("output");
+        let updateButton = document.getElementById("updateButton");
+
+        updateButton.addEventListener('click', function() {
+            let enteredText = inputElement.value;
+            outputElement.textContent = enteredText;
+        })
+    </script>
+</body>
+</html>
