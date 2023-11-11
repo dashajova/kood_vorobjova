@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping List</title>
+</head>
+<body>
+    <h1>Shopping List</h1>
+
+    <input type="text" id="item" placeholder="Add food item" required>
+    <button id="addItem">Add</button>
+
+    <ul id="shopping-list">
+        <!-- Shopping list items will be added here -->
+    </ul>
+
+    <script>
+       document.getElementById('addItem').addEventListener('click', function() {
+        //Valin sisestatud toiduaine//
+        let newItem = document.getElementById('item').value;
+        
+        if (newItem.trim() !== '') {
+          //Valin kuhu toiduaine läheb//
+          let shoppingList = document.getElementById('shopping-list');
+
+          //Loon uue ostunimekirja elemendi//
+          let listItem = document.createElement('li');
+          listItem.textContent = newItem;
+
+          //Lisan uue ostunimekirja elemendi//
+          shoppingList.appendChild(listItem);
+
+          //Tühjendan välja peale nupu vajutamist//
+          document.getElementById('item').value = '';
+        }
+       })
+
+    </script>
+</body>
+</html>
