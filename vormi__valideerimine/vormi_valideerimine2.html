@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang en>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vormi valideerimine</title>
+        <style>
+
+            .container{
+    position: absolute;
+    width: 50%;
+    min-width: 58px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background-color:#eceaea;
+    padding: 100px 0px;
+    display: grid;
+    justify-items: center;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
+            }
+
+            .h3{
+    font-size: 60px;
+    font-weight: 600;
+
+}
+
+   
+button{
+    position: absolute;
+    width: 100px;
+    padding: 10px 0;
+    border-radius: 5px;
+    background-color: #3f3a5e;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600; 
+    
+
+}
+
+
+    
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h3> Logi sisse</h3>
+             <form id="myForm">
+            <input type="text" id="kasutajanimi" placeholder="Kasutajanimi" required minlength="5"><br>
+            <input type="text" id="ePost" placeholder="E-post" pattern="[^\s@]+@[^\s@]+\.[^\s@]+" required><br>
+            <input type="text" id="parool" placeholder="Parool"  required minlength="8"><br>
+           
+            <button type="submit">Sisene</button>
+        </form>
+        </div>
+
+
+       
+    </body>
+</html>
